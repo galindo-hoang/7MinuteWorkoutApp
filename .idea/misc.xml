@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable-v24/circle_grey_solid.xml" value="0.3828125" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/check_finish.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_background.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_border.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_button_green_border.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_button_purple_border.xml" value="0.3828125" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_button_start.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_green_border.xml" value="0.3828125" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_green_solid.xml" value="0.3828125" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_progress_button.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_progress_currency.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_progress_green_border.xml" value="0.3828125" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_progress_grey.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/circle_progress_grey_border.xml" value="0.3828125" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/ripple_circle_button_green_border.xml" value="0.3828125" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/drawable/ripple_circle_button_purple_border.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_check_count_down.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_exercise.xml" value="0.25" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_finish.xml" value="0.22" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/layout/number_current_exercise.xml" value="0.33" />
+        <entry key="..\:/Users/huy/AndroidStudioProjects/7MinuteWorkout/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21979166666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
