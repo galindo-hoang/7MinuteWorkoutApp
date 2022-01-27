@@ -1,5 +1,6 @@
 package com.example.a7minuteworkout
 
+import android.app.Dialog
 import android.content.ContentResolver
 import android.content.Intent
 import android.media.MediaPlayer
@@ -11,6 +12,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.a7minuteworkout.databinding.ActivityDialogBinding
 import com.example.a7minuteworkout.databinding.ActivityExerciseBinding
 import java.io.File
 import java.util.*
@@ -40,31 +42,72 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         this.binding = ActivityExerciseBinding.inflate(layoutInflater)
         setContentView(this.binding?.root)
 
+
         setSupportActionBar(this.binding!!.actionBar)
         // show arrow left
         if(supportActionBar != null) supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         this.binding!!.actionBar.setNavigationOnClickListener {
-            this.onBackPressed()
+            setupNavigationBar()
         }
+
+
         mediaPlayer = MediaPlayer.create(this, Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + File.pathSeparator + File.separator + File.separator + packageName + "/" + R.raw.press_start))
         mediaPlayer?.isLooping = false
+
 
         binding?.pbCountDownStart?.max = startTime.toInt()
         binding?.pbCountDownExercise?.max = exerciseTime.toInt()
 
+
         exerciseList = Constants.getExerciseList()
         tts = TextToSpeech(this,this)
 
+
         binding?.rcvExerciseList?.adapter = ExerciseViewAdapter(exerciseList!!)
         binding?.rcvExerciseList?.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+
 
         this.setupBreakPB()
 
     }
 
+    override fun onBackPressed() {
+        this.setupNavigationBar()
+    }
+
+    private fun setupNavigationBar() {
+        val check = when{
+            (start != null) -> 0
+            else -> 1
+        }
+
+        if(check == 0) start!!.cancel()
+        else exercise!!.cancel()
+
+
+        val dialog = Dialog(this)
+        val bindingDialog = ActivityDialogBinding.inflate(layoutInflater)
+        dialog.setContentView(bindingDialog.root)
+        dialog.setCanceledOnTouchOutside(false)
+
+        bindingDialog.btnYes.setOnClickListener {
+            dialog.dismiss()
+            finish()
+        }
+
+        bindingDialog.btnNo.setOnClickListener {
+            dialog.dismiss()
+            if(check == 0) setupBreakPB()
+            else setupExercisePB()
+        }
+
+
+        dialog.show()
+    }
+
 
     fun setupBreakPB(){
+        exercise = null
         binding?.imExercise?.visibility = View.INVISIBLE
         binding?.tvExerciseName?.visibility = View.INVISIBLE
         binding?.flCircleExercise?.visibility = View.INVISIBLE
@@ -104,6 +147,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
 
     fun setupExercisePB(){
+        start = null
         binding?.flCircleStart?.visibility = View.INVISIBLE
         binding?.tvStart?.visibility = View.INVISIBLE
         binding?.tvUpComingExercise?.visibility = View.INVISIBLE

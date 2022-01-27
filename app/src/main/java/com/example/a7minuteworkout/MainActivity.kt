@@ -18,5 +18,15 @@ class MainActivity : AppCompatActivity() {
         biding!!.frameClick.setOnClickListener {
             startActivity(Intent(this,ExerciseActivity::class.java))
         }
+
+
+        biding!!.flBMI.setOnClickListener {
+            startActivity(Intent(this,bmiActivity::class.java))
+        }
+
+
+        biding!!.flHistory.setOnClickListener {
+            startActivity(Intent(this,HistoryActivity::class.java))
+        }
     }
 }
